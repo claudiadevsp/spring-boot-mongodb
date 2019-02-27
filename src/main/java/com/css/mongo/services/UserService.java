@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.css.mongo.domain.User;
 import com.css.mongo.repository.UserRepository;
+import com.css.mongo.services.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {
@@ -11,6 +12,5 @@ public class UserService {
 	private UserRepository repo;
 	public List<User> findAll() {
 		return repo.findAll();
-	}
-
+	}	
 }
